@@ -1,12 +1,30 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>D3 Demo</title>
-    </head>
+<head>
+    <title>D3 Demo</title>
+    <style>
+        .chart div {
+            font: 10px sans-serif;
+            background-color: steelblue;
+            text-align: right;
+            padding: 3px;
+            margin: 1px;
+            color: white;
+        }
+    </style>
+</head>
 <body>
-
+    <div class="chart">
+        <div style="width: 40px;">4</div>
+        <div style="width: 80px;">8</div>
+        <div style="width: 150px;">15</div>
+        <div style="width: 160px;">16</div>
+        <div style="width: 230px;">23</div>
+        <div style="width: 420px;">42</div>
+    </div>
     <script src="Scripts/d3.js"></script>
     <script>
+        var data = [4, 8, 15, 16, 23, 42];
         var body = d3.select("body");
         var div = body.append("div");
         div.html("Hello, world!");
